@@ -19,15 +19,22 @@ public class Bs2Application {
 	public static ConfigurableApplicationContext cap;
 
 	public static void main(String[] args) {
-		SpringApplication.run(Bs2Application.class, args);
+		cap = SpringApplication.run(Bs2Application.class, args);
 	}
 
 
-	@Bean()
+	@Bean("bean1")
 	public static Persona persona1() {
 		return Persona.builder().nombre("Marcos").edad(24).poblacion("Toledo").build();
 	}
-
+	@Bean("bean2")
+	public static Persona persona2() {
+		return Persona.builder().nombre("Andrea").edad(22).poblacion("Yeles").build();
+	}
+	@Bean("bean3")
+	public static Persona persona3() {
+		return Persona.builder().nombre("Eustaquia").edad(64).poblacion("Valdemoro").build();
+	}
 	@Bean()
 	public static ArrayList<Ciudad> listaCiudades()
 	{

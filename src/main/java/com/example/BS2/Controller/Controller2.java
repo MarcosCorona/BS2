@@ -29,4 +29,5 @@ public class Controller2 {
     public ArrayList<Ciudad> getCiudad() {
         return listaCiudades;
     }
+
 }
